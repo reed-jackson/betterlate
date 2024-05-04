@@ -1,95 +1,64 @@
+import { Avatar, Box, Card, Code, Container, Dialog, Flex, Heading, ScrollArea, Text } from "@radix-ui/themes";
 import Image from "next/image";
-import styles from "./page.module.css";
 
 export default function Home() {
-  return (
-    <main className={styles.main}>
-      <div className={styles.description}>
-        <p>
-          Get started by editing&nbsp;
-          <code className={styles.code}>app/page.js</code>
-        </p>
-        <div>
-          <a
-            href="https://vercel.com?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            By{" "}
-            <Image
-              src="/vercel.svg"
-              alt="Vercel Logo"
-              className={styles.vercelLogo}
-              width={100}
-              height={24}
-              priority
-            />
-          </a>
-        </div>
-      </div>
+	return (
+		<main>
+			<Flex
+				position={{ initial: "static", sm: "fixed" }}
+				bottom={"0"}
+				left={"0"}
+				p="4"
+				direction={"column"}
+				justify={"end"}
+				align={"start"}
+				maxWidth={{ initial: "100%", sm: "50%" }}
+				height={"100vh"}
+				style={{ zIndex: "-1" }}
+				mb={{ initial: "4", sm: "0" }}
+			>
+				<Flex align={"center"} gap={"2"}>
+					<Code size={"7"}>betterlate.dev</Code>
+					<a href="https://twitter.com/likesmetaphors">
+						<Avatar
+							src="https://pbs.twimg.com/profile_images/1785362324338962432/sHVjLduE_400x400.jpg"
+							radius="full"
+							size={"4"}
+						/>
+					</a>
+				</Flex>
+				<Heading size={{ initial: "7", sm: "9" }} style={{ fontSize: "126px", lineHeight: "0.9" }}>
+					Build the software you wish to see in the world
+				</Heading>
+			</Flex>
 
-      <div className={styles.center}>
-        <Image
-          className={styles.logo}
-          src="/next.svg"
-          alt="Next.js Logo"
-          width={180}
-          height={37}
-          priority
-        />
-      </div>
+			<Flex
+				position={{ initial: "static", sm: "fixed" }}
+				right={"0"}
+				bottom={"0"}
+				top={"0"}
+				left={"60%"}
+				justify={"end"}
+				align={"end"}
+				direction={"column"}
+				maxWidth={{ initial: "100%", sm: "50%" }}
+			>
+				<Flex direction={"column"} justify={"end"} gap={"4"} p={"4"} width={"100%"}>
+					<Card variant="classic" size={"4"}>
+						<img src="/dialog.svg" style={{ maxHeight: 40, filter: "saturate(0%)" }} />
+					</Card>
 
-      <div className={styles.grid}>
-        <a
-          href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Docs <span>-&gt;</span>
-          </h2>
-          <p>Find in-depth information about Next.js features and API.</p>
-        </a>
-
-        <a
-          href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Learn <span>-&gt;</span>
-          </h2>
-          <p>Learn about Next.js in an interactive course with&nbsp;quizzes!</p>
-        </a>
-
-        <a
-          href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Templates <span>-&gt;</span>
-          </h2>
-          <p>Explore starter templates for Next.js.</p>
-        </a>
-
-        <a
-          href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template&utm_campaign=create-next-app"
-          className={styles.card}
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          <h2>
-            Deploy <span>-&gt;</span>
-          </h2>
-          <p>
-            Instantly deploy your Next.js site to a shareable URL with Vercel.
-          </p>
-        </a>
-      </div>
-    </main>
-  );
+					<Card variant="classic" size={"4"}>
+						<img src="/wowsbuilds.svg" style={{ maxHeight: 40 }} />
+					</Card>
+					<Card variant="classic" size={"4"}>
+						<img src="/miselogo.svg" style={{ maxHeight: 40 }} />
+					</Card>
+					<Card variant="classic" size={"4"}>
+						<Heading size={"7"}>PRD Copilot</Heading>
+					</Card>
+				</Flex>
+			</Flex>
+		</main>
+	);
 }
