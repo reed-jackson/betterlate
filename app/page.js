@@ -1,5 +1,4 @@
-import { Avatar, Box, Card, Code, Container, Dialog, Flex, Heading, ScrollArea, Text } from "@radix-ui/themes";
-import Image from "next/image";
+import { Avatar, Card, Code, Flex, Heading } from "@radix-ui/themes";
 
 export default function Home() {
 	return (

@@ -2,9 +2,7 @@ import "./globals.css";
 import "@radix-ui/themes/styles.css";
 import "./theme-config.css";
 
-import { Inter } from "next/font/google";
-
-import { Theme, ThemePanel } from "@radix-ui/themes";
+import { Theme } from "@radix-ui/themes";
 
 export const metadata = {
 	title: "betterlate",
